@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SpiroGraphics for the kids?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="../spirographics/assets/js/spiro.js"></script>
+    <!-- Le styles -->
+    <link href="../spirographics/assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+
+    </style>
+    <link href="../spirographics/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+<script type="text/javascript">
+
+	function welcome()
+{
+
+
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+
+    // set canvas width and height
+    context.canvas.width  = window.innerWidth - 50;
+    context.canvas.height = window.innerHeight - 50;
+
+    // create array of neon colors
+    var colorArray = ["#fa9033", "#ffda3b", "#ffff1b", "#ffff59", "#faf831", "#fcfa65", "#3cb24a", "#85de67", "#067952", "#42a964", "#0d94b0", "#caf7f1", "#39a6c8", "#95def6", "#27c0ef", "#0098d6", "#74aad8", "#1f60ad", "#0e268b", "#130f88", "#13016f", "#fcffff", "#f9f9fc", "#fffeff", "#f9f9f9", "#fefefe", "#fcfcfc", "#fffeff", "#fdf996", "#ffa2b8", "#fa5192", "#ff1366", "#f62821", "#ff246f", "#fffeff", "#b73d9c", "#a762ab", "#360062", "#f60f41", "#f82015", "#fa1b16", "#ef2310", "#f88721"];
+var mySpiro;
+if (localStorage.getItem("curFixed") === null) {
+    // create spirograph object
+    mySpiro = {
+        currentTheta: 0,
+        lineColor: colorArray[Math.floor(Math.random()*43)],
+        fixedGearRadius: Math.floor(Math.random()*canvas.height/3),
+        movingGearRadius: Math.floor(Math.random()*canvas.height/3),
+        movingGearOffset: Math.floor(Math.random()*canvas.height/3),
+        maxTheta: 0
+    };
+
+}
+else
+{
+   alert('here');
+    mySpiro = {
+        currentTheta: 0,
+        lineColor: colorArray[Math.floor(Math.random()*43)],
+        fixedGearRadius: 100,
+        movingGearRadius: 100,
+        movingGearOffset:100,
+        maxTheta: 0
+    };
+}
+    mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
+
+    document.getElementById("moving").value = mySpiro.movingGearRadius;
+    document.getElementById("offset").value = mySpiro.movingGearOffset;
+    document.getElementById("fixed").value = mySpiro.fixedGearRadius;
+    var date = new Date();
+    var time = date.getTime();
+    animate(time, mySpiro);
+
+}
+
+function update()
+{
+	x = document.getElementById("fixed").value;
+	localStorage.setItem('currFixed',x);
+
+   	
+}
+
+function save()
+{
+
+            var canvas = document.getElementById("myCanvas");
+
+	// save canvas image as data url (png format by default)
+            var dataURL = canvas.toDataURL();
+ 
+            // set canvasImg image src to dataURL
+            // so it can be saved as an image
+	    alert (dataURL);
+}
+    </script>
+
+<script>
+
+
+    $("input").focus(function () {
+         $(this).next("span").css('display','inline').fadeOut(1000);
+	
+    });
+</script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../spirographics/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../spirographics/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../spirographics/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../spirographics/assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body onload="welcome()">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">SpiroGraphics</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Generate</a></li>
+              <li><a href="#about">Top 10 Spirographs</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2" style="width:20%" style="background:#fff">
+          <div class="well sidebar-nav" id="sidebar" >
+
+	<form id="update">
+
+  <p><span>fixed gear radius: </span><br /><input type="text" id = "fixed"/></p>
+<p> <span>moving gear radius</span><br /><input type="text" id="moving" /></p><p><span>moving gear offset</span><input type="text" id = "offset" /> </p>
+	  <input type="submit" value="Update" onclick="update()" class="btn btn-primary btn-small"/>
+
+    </form>
+          </div><!--/.well -->
+<div class="well sidebar-nav" id="sidebar" >
+            <p><center> <input type="image" src="../spirographics/assets/img/up.png" style="width:64px; padding-right:15px; "> <input type="image" src="../spirographics/assets/img/down.png" style=" width:64px"><br /><h3>Do you like this graph?</h3></p></div>
+<div class="well sidebar-nav" id="sidebar" >
+            <div style="width:48%; float:left"><p><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></center></p></div>
+
+</div>
+        </div><!--/span-->
+        <div class="span10" style="width:75%">
+		<div style="background:#000">
+                <canvas id="myCanvas" />
+		</div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; tehInternetzd00d (we are ironic) 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../spirographics/assets/js/jquery.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-transition.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-alert.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-modal.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-dropdown.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-tab.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-tooltip.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-popover.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-button.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-collapse.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-carousel.js"></script>
+    <script src="../spirographics/assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
