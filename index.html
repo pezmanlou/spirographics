@@ -95,8 +95,8 @@ function save()
             var canvas = document.getElementById("myCanvas");
 
 	// save canvas image as data url (png format by default)
-            var dataURL = canvas.toDataURL();
- 
+            //var dataURL = canvas.toDataURL();
+ Canvas2Image.saveAsPNG(canvas);
             // set canvasImg image src to dataURL
             // so it can be saved as an image
 	    alert (dataURL);
@@ -179,6 +179,8 @@ function save()
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://www.nihilogic.dk/labs/canvas2image/canvas2image.js" type="text/javascript"></script>
+    <script src="http://www.nihilogic.dk/labs/canvas2image/base64.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
