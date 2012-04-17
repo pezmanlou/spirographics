@@ -13,14 +13,18 @@
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    background-color: black;
       }
 
+.container {
+    background-color: transparent;
+}
     </style>
     <link href="../spirographics/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 <script type="text/javascript">
 
-	function welcome()
+function welcome()
 {
 
 
@@ -34,7 +38,7 @@
     // create array of neon colors
     var colorArray = ["#fa9033", "#ffda3b", "#ffff1b", "#ffff59", "#faf831", "#fcfa65", "#3cb24a", "#85de67", "#067952", "#42a964", "#0d94b0", "#caf7f1", "#39a6c8", "#95def6", "#27c0ef", "#0098d6", "#74aad8", "#1f60ad", "#0e268b", "#130f88", "#13016f", "#fcffff", "#f9f9fc", "#fffeff", "#f9f9f9", "#fefefe", "#fcfcfc", "#fffeff", "#fdf996", "#ffa2b8", "#fa5192", "#ff1366", "#f62821", "#ff246f", "#fffeff", "#b73d9c", "#a762ab", "#360062", "#f60f41", "#f82015", "#fa1b16", "#ef2310", "#f88721"];
 var mySpiro;
-if (localStorage.getItem("curFixed") === null) {
+
     // create spirograph object
     mySpiro = {
         currentTheta: 0,
@@ -44,20 +48,6 @@ if (localStorage.getItem("curFixed") === null) {
         movingGearOffset: Math.floor(Math.random()*canvas.height/3),
         maxTheta: 0
     };
-
-}
-else
-{
-   alert('here');
-    mySpiro = {
-        currentTheta: 0,
-        lineColor: colorArray[Math.floor(Math.random()*43)],
-        fixedGearRadius: 100,
-        movingGearRadius: 100,
-        movingGearOffset:100,
-        maxTheta: 0
-    };
-}
     mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
 
     document.getElementById("moving").value = mySpiro.movingGearRadius;
@@ -71,10 +61,29 @@ else
 
 function update()
 {
-	x = document.getElementById("fixed").value;
-	localStorage.setItem('currFixed',x);
 
-   	
+   var colorArray = ["#fa9033", "#ffda3b", "#ffff1b", "#ffff59", "#faf831", "#fcfa65", "#3cb24a", "#85de67", "#067952", "#42a964", "#0d94b0", "#caf7f1", "#39a6c8", "#95def6", "#27c0ef", "#0098d6", "#74aad8", "#1f60ad", "#0e268b", "#130f88", "#13016f", "#fcffff", "#f9f9fc", "#fffeff", "#f9f9f9", "#fefefe", "#fcfcfc", "#fffeff", "#fdf996", "#ffa2b8", "#fa5192", "#ff1366", "#f62821", "#ff246f", "#fffeff", "#b73d9c", "#a762ab", "#360062", "#f60f41", "#f82015", "#fa1b16", "#ef2310", "#f88721"];
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+
+    //context.fillStyle = "#000000";
+    context.clearRect(0,0,canvas.width, canvas.height);
+   // context.fill();
+	
+	var mySpiro = {
+        currentTheta: 0,
+        lineColor: colorArray[Math.floor(Math.random()*43)],
+        fixedGearRadius:  document.getElementById("fixed").value,
+        movingGearRadius:  document.getElementById("moving").value,
+        movingGearOffset:  document.getElementById("offset").value,
+        maxTheta: 0
+    };
+
+	  mySpiro.maxTheta = (Math.abs	(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI
+    var date = new Date();
+    var time = date.getTime();
+    animate(time, mySpiro);
+
 }
 
 function save()
@@ -139,9 +148,10 @@ function save()
 
 	<form id="update">
 
-  <p><span>fixed gear radius: </span><br /><input type="text" id = "fixed"/></p>
-<p> <span>moving gear radius</span><br /><input type="text" id="moving" /></p><p><span>moving gear offset</span><input type="text" id = "offset" /> </p>
-	  <input type="submit" value="Update" onclick="update()" class="btn btn-primary btn-small"/>
+  <p><span>fixed gear radius: </span><br /><input type="text" style="width: 75%" id = "fixed"/></p>
+<p> <span>moving gear radius</span><br /><input type="text" style="width: 75%" id="moving" /></p><p><span>moving gear offset</span><input type="text" id = "offset" style="width: 75%" /> </p>
+	  <input type="button" value="Draw" onclick="update()" class="btn btn-primary btn-small"/>
+	<input type ="submit" value="Random" class="btn btn-primary btn-small"/>
 
     </form>
           </div><!--/.well -->
@@ -152,7 +162,7 @@ function save()
 
 </div>
         </div><!--/span-->
-        <div class="span10" style="width:75%">
+ <div class="span9">
 		<div style="background:#000">
                 <canvas id="myCanvas" />
 		</div>
