@@ -46,11 +46,14 @@ var mySpiro;
     mySpiro = {
         currentTheta: 0,
         lineColor: colorArray[Math.floor(Math.random()*43)],
-        fixedGearRadius: Math.floor(Math.random()*canvas.height/3),
-        movingGearRadius: Math.floor(Math.random()*canvas.height/3),
-        movingGearOffset: Math.floor(Math.random()*canvas.height/3),
+        fixedGearRadius: 0,
+        movingGearRadius: 0,
+        movingGearOffset: 0,
         maxTheta: 0
     };
+    mySpiro.fixedGearRadius = Math.floor(Math.random()*canvas.height/2);
+    mySpiro.movingGearRadius = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
+    mySpiro.movingGearOffset = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
 
     document.getElementById("moving").value = mySpiro.movingGearRadius;
