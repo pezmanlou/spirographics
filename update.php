@@ -7,5 +7,5 @@ require("connect.php");
 //$_GET["fixed"]
 //$_GET["moving"]
 //$_GET["offset"]
-echo $_SERVER['REMOTE_ADDR'];
+echo $_SERVER['REMOTE_ADDR'];  // echos ip address of client
 ?>
