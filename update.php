@@ -4,7 +4,7 @@ require("connect.php");
 
 //$link // name of db connection
 
-//$_GET["fixed"]
+echo $_POST["fixed"];
 //$_GET["moving"]
 //$_GET["offset"]
 echo $_SERVER['REMOTE_ADDR'];  // echos ip address of client
