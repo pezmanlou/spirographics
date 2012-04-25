@@ -2,9 +2,10 @@
 require("connect.php");
 
 
-$link // name of db connection
+//$link // name of db connection
 
-$_GET["fixed"]
-$_GET["moving"]
-$_GET["offset"]
+//$_GET["fixed"]
+//$_GET["moving"]
+//$_GET["offset"]
+echo $_SERVER['REMOTE_ADDR'];
 ?>
