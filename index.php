@@ -103,6 +103,18 @@ function save()
             // so it can be saved as an image
 	    alert (dataURL);
 }
+
+
+function addToTheMotherFuckingDatabaseLouisIsThatBetter()
+{
+
+var offset = document.getElementById("offset").value;
+$('input[name=offset]').val(offset);
+alert(offset);
+//document.bonerjams09.submit();
+
+}
+
     </script>
 
 
@@ -157,13 +169,15 @@ function save()
           </div><!--/.well -->
 <div class="well sidebar-nav" id="sidebar" >
 
-<form id="Form1" action="self" method="post">
-   <input type="hidden" name="moving" value="value">
-   <input type="hidden" name="offset"><br>
-  <input type="hidden" name="fixed" value="sent">
-<button type="submit" name="Submit"><img src="assets/img/up.png" style="width:64px; padding-right:15px; "></button>
-	
+ <form id="bonerjams08" action="self" method="post">
+   <input type="hidden" name="moving" value="">
+   <input type="hidden" name="offset" value = ""><br>
+  <input type="hidden" name="fixed" value="">
 </form>
+
+<button type="submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px; padding-right:15px; "></button>
+	
+
 
 
 
