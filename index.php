@@ -194,11 +194,12 @@ document.bonerjams08.submit();
   <input type="hidden" name="fixed" value="">
   <input type="hidden" name="vote" value="">
 </form>
-
-<button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px; padding-right:15px; "/></button>
-	
+<div style="float:left">
+<button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
+</div>
+<div style="float:right">	
  <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
-
+</div>
 
 <h3>Do you like this graph?</h3></p></div>
 <div class="well sidebar-nav" id="sidebar" >
