@@ -17,7 +17,9 @@ $sql = "SELECT * FROM graphs WHERE 1";
 
 $result = mysql_query($sql);
 
-echo $result
+$num=mysql_numrows($result);
+
+echo $num
 
 
 
