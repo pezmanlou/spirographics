@@ -16,9 +16,12 @@ $sql = "SELECT * FROM graphs";
 
 $result = mysql_query($sql);
 
-echo mysql_result($result,1);
+while($row = mysql_fetch_array($result)
+{
+	print_r($row);	
+	echo '<br/>';
 
-$num=mysql_numrows($result);
+}
 
 mysql_close();
 
