@@ -7,7 +7,7 @@ require("connect.php");
 
 //mysql_query("INSERT into graphs (fixed, moving,offset) VALUES ( '$_POST[fixed]', '$_POST[moving]', '$_POST[offset]')";
 
-//echo $_SERVER['REMOTE_ADDR'];  // echos ip address of client
+$clientIp = $_SERVER['REMOTE_ADDR'];  // echos ip address of client
 
 $fixed = $_POST[fixed];
 $moving = $_POST[moving];
@@ -17,8 +17,8 @@ $sql = "SELECT * FROM graphs WHERE fixed='$fixed' AND moving='$moving' AND offse
 $result = mysql_query($sql);
 if(mysql_num_rows($result)==0)
 {
-	echo 'new';
-
+	$insert = "INSERT INTO graphs VALUES (", '$fixed', '$moving', '$offset',1,0,'$clientIp'")"; 
+	$newChart = mysql_query($insert);
 }
 else
 {
