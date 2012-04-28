@@ -22,7 +22,7 @@ if (!$result) {
 }
 
 while ($row = mysql_fetch_row($result)) {
-   
+   }
 
 
 ?>
