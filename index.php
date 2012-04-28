@@ -161,7 +161,7 @@ document.bonerjams08.submit();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">SpiroGraphics</a>
+          <a class="brand" href="">SpiroGraphics</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Generate</a></li>
