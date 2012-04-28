@@ -12,14 +12,10 @@ require("connect.php");
 
 $dbname = "spiro";
 
+
 $sql = "SELECT * FROM 'graphs'";
 $result = mysql_query($sql);
 
-if (!$result) {
-    echo "DB Error, could not list tables\n";
-    echo 'MySQL Error: ' . mysql_error();
-    exit;
-}
 
 echo $result;
 mysql_free_result($result);
