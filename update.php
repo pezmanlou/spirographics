@@ -37,11 +37,12 @@ if(mysql_num_rows($result)==0)
 	{
 
 		$insert = "INSERT INTO graphrank (fixed,moving,offset,rank) VALUES ( '$fixed', '$moving', '$offset', '$vote')";
-
+	$insertNew = mysql_query($insert);
 	}
 	else
 	{
 	$update ="UPDATE graphrank SET rank=rank + '$vote' WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset'";
+	$updateRank = mysql_query($update);
 	}
 
 }
