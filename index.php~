@@ -195,9 +195,9 @@ document.bonerjams08.submit();
   <input type="hidden" name="vote" value="">
 </form>
 
-<button type="submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
+<button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
 	
- <button type="submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
+ <button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
 
 
 <h3>Do you like this graph?</h3></p></div>

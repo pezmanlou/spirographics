@@ -107,7 +107,7 @@ function save()
 
 function addToTheMotherFuckingDatabaseLouisIsThatBetter()
 {
-
+alert("fuck");
 var offset = document.getElementById("offset").value;
 var moving = document.getElementById("moving").value;
 var fixed = document.getElementById("fixed").value;
