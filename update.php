@@ -12,18 +12,12 @@ require("connect.php");
 
 
 
-$sql = "SELECT * FROM 'graphs' WHERE 1";
+$sql = "SELECT * FROM graphs WHERE 1";
 
 
 $result = mysql_query($sql);
 
-$num=mysql_numrows($result);
 
-while($i < $num)
-{
-	echo $i
-	i++
-}
 
 
 
