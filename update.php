@@ -12,7 +12,7 @@ require("connect.php");
 
 $dbname = "spiro";
 
-$sql = "SELECT * FROM 'graphs' WHERE 1";
+$sql = "SELECT * FROM \'graphs\'";
 $result = mysql_query($sql);
 
 if (!$result) {
