@@ -165,7 +165,7 @@ document.bonerjams08.submit();
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Generate</a></li>
-              <li><a href="#about">Top 10 Spirographs</a></li>
+              <li><a href="topgraphs.php">Top 10 Spirographs</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
