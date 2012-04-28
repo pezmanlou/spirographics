@@ -4,7 +4,7 @@
 
 if ( $_POST['payload'] ) {
   shell_exec( 'touch /log/hook-success' );
-  shell_exec( 'cd /var/www/Spirographics/ && git reset --hard HEAD && git pull' > );
+  shell_exec( 'cd /var/www/Spirographics/ && git reset --hard HEAD && git pull' );
 }
 
 ?>hi
