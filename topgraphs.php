@@ -1,7 +1,7 @@
 <?php
 require("connect.php");
 
-$result = mysql_query("SELECT * FROM graphrank ORDER BY rank DEC LIMIT 0,10");
+$result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
 
 while($row = mysql_fetch_array($result))
 {
