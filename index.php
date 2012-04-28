@@ -114,7 +114,7 @@ var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
-document.bonerjams09.submit();
+document.bonerjams08.submit();
 
 }
 
