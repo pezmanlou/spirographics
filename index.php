@@ -172,7 +172,7 @@ document.bonerjams09.submit();
           </div><!--/.well -->
 <div class="well sidebar-nav" id="sidebar" >
 
- <form id="bonerjams08" action="self" method="post">
+ <form id="bonerjams08" action="update.php" method="post">
    <input type="hidden" name="moving" value="">
    <input type="hidden" name="offset" value = ""><br>
   <input type="hidden" name="fixed" value="">
