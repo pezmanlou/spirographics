@@ -12,11 +12,11 @@ require("connect.php");
 
 
 $sql = "SELECT * FROM graphs";
-
+	
 
 $result = mysql_query($sql);
 
-while($row = mysql_fetch_array($result)
+while($row = mysql_fetch_array($result))
 {
 	print_r($row);	
 	echo '<br/>';
