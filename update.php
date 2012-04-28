@@ -16,7 +16,7 @@ $sql = "SELECT * FROM graphs";
 
 $result = mysql_query($sql);
 
-echo mysql_result($result);
+echo mysql_result($result,1);
 
 $num=mysql_numrows($result);
 
