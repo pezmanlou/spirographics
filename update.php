@@ -24,6 +24,7 @@ if(mysql_num_rows($result)==0)
 }
 else
 {
+	echo 'here'
 	$update = "UPDATE graphs counter=counter+1 WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset'";
 	$updateChart= mysql_query($update);
 	
