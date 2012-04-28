@@ -114,7 +114,7 @@ var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
-//$('input[name=vote]')= "up";
+$('input[name=vote]').val("up");
 document.bonerjams08.submit();
 
 }
@@ -128,7 +128,7 @@ var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
-//$('input[name=vote]') = "down";
+$('input[name=vote]').val("down");
 document.bonerjams08.submit();
 
 
