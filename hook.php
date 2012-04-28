@@ -2,9 +2,9 @@
 
 // Use in the "Post-Receive URLs" section of your GitHub repo.
 
-//if ( $_POST['payload'] ) {
-  shell_exec( 'touch /log/penishhzztopolojohnson' ); // olo jo
+if ( $_POST['payload'] ) {
+  shell_exec( 'touch /log/hook-success' ); // olo jo
   //shell_exec( 'cd /var/www/Spirographics/ && git reset --hard HEAD && git pull' > );
-//}
+}
 
 ?>hi
