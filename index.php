@@ -197,7 +197,7 @@ document.bonerjams08.submit();
 
 <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px; padding-right:15px; "></button>
 	
- <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()" src="assets/img/down.png" style=" width:64px"><br />
+ <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()" src="assets/img/down.png" style=" width:64px"><br /></button>
 
 
 <h3>Do you like this graph?</h3></p></div>
