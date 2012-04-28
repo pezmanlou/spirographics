@@ -1,12 +1,10 @@
--<?php
+<?php
 
-// Use in the "Post-Receive URLs" section of your GitHub repo. :4
+// this automatically pulls on the server whenever a commit is pushed to github
 
-//if ( $_POST['payload'] ) {
-  shell_exec( 'touch /log/hook-success' );
+if ( $_POST['payload'] ) {
   $output = shell_exec( 'git pull' );
-  //$output = shell_exec( 'pwd' );
   echo "$output";
-//}
+}
 
-?>-
+?>
