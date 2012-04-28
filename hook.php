@@ -3,7 +3,7 @@
 // Use in the "Post-Receive URLs" section of your GitHub repo.
 
 //if ( $_POST['payload'] ) {
-  shell_exec( 'touch /log/penishhzztop' ); // olo
+  shell_exec( 'touch /log/penishhzztopolojohnson' ); // olo
   //shell_exec( 'cd /var/www/Spirographics/ && git reset --hard HEAD && git pull' > );
 //}
 
