@@ -12,7 +12,7 @@ require("connect.php");
 
 $dbname = "spiro";
 
-$sql = "SHOW TABLES FROM $dbname";
+$sql = "SELECT * FROM 'graphs' WHERE 1";
 $result = mysql_query($sql);
 
 if (!$result) {
@@ -21,10 +21,7 @@ if (!$result) {
     exit;
 }
 
-while ($row = mysql_fetch_row($result)) {
-	 echo "Table: {$row[0]}\n";
-   }
-
+echo $result;
 mysql_free_result($result);
 
 
