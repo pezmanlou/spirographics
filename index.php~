@@ -200,10 +200,10 @@ document.bonerjams08.submit();
 <div style="float:right">	
  <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
 </div>
-
-<h2>Do you like this graph?</h2>
+<div>
+<h3>Do you like this graph?</h3></p></div>
 <div class="well sidebar-nav" id="sidebar" >
-            <div style="width:48%; float:left"><p><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></center>
+            <div style="width:48%; float:left"><p><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></center></p></div>
 
 </div>
         </div><!--/span-->
