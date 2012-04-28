@@ -54,7 +54,7 @@ var mySpiro;
     mySpiro.movingGearRadius = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.movingGearOffset = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
-    <?php if($_GET['fixed']) ?>
+    <?php if($_GET['fixed']) 
 
 	echo "alert(".$_GET['fixed'].");";
     ?>	
