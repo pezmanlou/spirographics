@@ -11,16 +11,17 @@ require("connect.php");
 
 
 
-$sql = "SELECT * FROM graphs WHERE 1";
+$sql = "SELECT * FROM graphs";
 
 
 $result = mysql_query($sql);
 
+echo mysql_result($result);
+
 $num=mysql_numrows($result);
 
-
-
 mysql_close();
+
 
 
 
