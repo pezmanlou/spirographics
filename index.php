@@ -107,14 +107,14 @@ function save()
 
 function addToTheMotherFuckingDatabaseLouisIsThatBetter()
 {
-alert("fuck");
+
 var offset = document.getElementById("offset").value;
 var moving = document.getElementById("moving").value;
 var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
-$('input[name=vote]')= "up";
+//$('input[name=vote]')= "up";
 document.bonerjams08.submit();
 
 }
@@ -128,7 +128,7 @@ var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
-$('input[name=vote]') = "down";
+//$('input[name=vote]') = "down";
 document.bonerjams08.submit();
 
 
