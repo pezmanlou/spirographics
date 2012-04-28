@@ -19,7 +19,6 @@ $result = mysql_query($sql);
 $num=mysql_numrows($result);
 
 
-echo $num
 
 mysql_close();
 
