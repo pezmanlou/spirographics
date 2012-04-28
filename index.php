@@ -109,9 +109,12 @@ function addToTheMotherFuckingDatabaseLouisIsThatBetter()
 {
 
 var offset = document.getElementById("offset").value;
+var moving = document.getElementById("moving").value;
+var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
-alert(offset);
-//document.bonerjams09.submit();
+$('input[name=moving]').val(moving);
+$('input[name=fixed]').val(fixed);
+document.bonerjams09.submit();
 
 }
 
