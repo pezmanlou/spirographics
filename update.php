@@ -24,8 +24,14 @@ if(mysql_num_rows($result)==0)
 }
 else
 {
-	echo 'here';
-	$update = "UPDATE graphs SET likes=likes+1 WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset'";
+	if($_POST['vote'] == 'up')
+	{
+		$update = "UPDATE graphs SET likes=likes+1 WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset'";
+	}
+	else
+	{
+		$update = "UPDATE graphs SET dislikes=dislikes+1 WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset'";
+	}
 	$updateChart= mysql_query($update);
 	
 }

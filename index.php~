@@ -112,9 +112,24 @@ var offset = document.getElementById("offset").value;
 var moving = document.getElementById("moving").value;
 var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
-alert($('input[name=moving]').val(moving));
+$('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
 document.bonerjams08.submit();
+
+}
+
+function addToTheMotherFuckingDatabaseLouisIsThatBetterDown()
+{
+
+var offset = document.getElementById("offset").value;
+var moving = document.getElementById("moving").value;
+var fixed = document.getElementById("fixed").value;
+$('input[name=offset]').val(offset);
+$('input[name=moving]').val(moving);
+$('input[name=fixed]').val(fixed);
+$('input[name=vote]') = "down";
+document.bonerjams08.submit();
+
 
 }
 
@@ -174,17 +189,17 @@ document.bonerjams08.submit();
 
  <form name="bonerjams08" action="update.php" method="post">
    <input type="hidden" name="moving" value="">
-   <input type="hidden" name="offset" value = ""><br>
+   <input type="hidden" name="offset" value = "">
   <input type="hidden" name="fixed" value="">
+  <input type="hidden" name="vote" value="">
 </form>
 
-<button type="submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px; padding-right:15px; "></button>
+<button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px; padding-right:15px; "></button>
 	
+ <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()" src="assets/img/down.png" style=" width:64px"><br />
 
 
-
-
-            <p><center> <input type="image" src="assets/img/down.png" style=" width:64px"><br /><h3>Do you like this graph?</h3></p></div>
+<h3>Do you like this graph?</h3></p></div>
 <div class="well sidebar-nav" id="sidebar" >
             <div style="width:48%; float:left"><p><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></center></p></div>
 
