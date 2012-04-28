@@ -10,10 +10,9 @@ require("connect.php");
 
 //echo $_SERVER['REMOTE_ADDR'];  // echos ip address of client
 
-$dbname = "spiro";
 
 
-$sql = "SELECT * FROM 'graphs'";
+$sql = "SELECT * FROM 'graphs' WHERE 1";
 $result = mysql_query($sql);
 
 
