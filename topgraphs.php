@@ -11,9 +11,28 @@ while($row = mysql_fetch_array($result))
 }
 
 ?>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SpiroGraphics for the kids?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="assets/js/spiro.js"></script>
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    background-color: black;
+      }
 
-</head>
+.container {
+    background-color: transparent;
+}
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 
  <body>
