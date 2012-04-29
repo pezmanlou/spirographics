@@ -170,7 +170,16 @@ function newAlert (type, message) {
 }*/
 
 function newAlert (type, message) {
-    $("#alert-area").append($("<div class='alert alert-"+type+"> <a class='close' data-dismiss='alert'>×</a>" + type + " </div>"));
+   if(type == 'success')
+{
+    $("#alert-area").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
+}
+else
+{
+    $("#alert-area").append($("<div class='alert alert-error'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
+
+}
+
 }
 
 
