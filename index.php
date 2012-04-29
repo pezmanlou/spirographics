@@ -121,7 +121,11 @@ $('input[name=vote]').val("up");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote: "up" },
             function(data){
-               newAlert('success',data);
+		if(data == "Connected Successfully")
+		{
+			newAlert('error', 'You have Already Voted on this Graph');
+		}
+               else{newAlert('success',data);}
             });
 
 }
@@ -141,7 +145,11 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-             newAlert('success', data);
+		if(data == "Connected Successfully")
+		{
+			newAlert('error', 'You have Already Voted on this Graph');
+		}
+             else{newAlert('success', data);}
             });
 }
 	
