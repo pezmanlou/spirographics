@@ -142,7 +142,7 @@ $('input[name=vote]').val("down");
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
              newAlert('success', data);
-            },"json");
+            });
 }
 	
 

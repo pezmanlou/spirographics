@@ -121,7 +121,7 @@ $('input[name=vote]').val("up");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote: "up" },
             function(data){
-               alert(data);
+               newAlert('success',data);
             });
 
 }
