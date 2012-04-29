@@ -146,13 +146,7 @@ $('input[name=vote]').val("down");
 
 }
 
-$(document).ajaxSuccess(function() {
-  //fire success message using the plugin of choice, for example using gritter:
-  $.gritter.add({ 
-    title: 'Save Complete!',
-    text: 'Your request completed successfully.'
-  });
-});
+	
 
 function getLink()
 {
@@ -232,7 +226,29 @@ function getLink()
   <input type="hidden" name="fixed" value="">
   <input type="hidden" name="vote" value="">
 </form>
+<div class="alerts">
 
+ <div class="alert-message warning">
+    <a class="close" href="#">×</a>
+    <p><strong>Holy guacamole!</strong> Best check yo self, you’re not <a href="#">looking too good</a>.</p>
+  </div>
+
+  <div class="alert-message error">
+    <a class="close" href="#">×</a>
+    <p><strong>Oh snap!</strong> Change this and that and <a href="#">try again</a>.</p>
+  </div>
+
+  <div class="alert-message success">
+    <a class="close" href="#">×</a>
+    <p><strong>Well done!</strong> You successfully <a href="#">read this</a> alert message.</p>
+  </div>
+
+  <div class="alert-message info">
+    <a class="close" href="#">×</a>
+    <p><strong>Heads up!</strong> This is an alert that needs your attention, but it’s not <a href="#">a huge priority</a> just yet.</p>
+  </div>
+
+</div>
 <button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
 	
  <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
