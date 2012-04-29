@@ -1,7 +1,7 @@
 <?php
 require("connect.php");
 
-$result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
+
 
 ?>
 <!DOCTYPE html>
@@ -51,7 +51,8 @@ $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
 
     <div class="container">
      	<div class="row">
-	<?php while($row = mysql_fetch_array($result))
+	<?php $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
+	while($row = mysql_fetch_array($result))
 {
 	echo "<div class='span4'>
 			<div class='well'>
