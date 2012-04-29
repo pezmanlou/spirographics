@@ -121,7 +121,11 @@ $('input[name=vote]').val("up");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote: "up" },
             function(data){
-               newAlert('success',data);
+		if(data == "Connected Successfully")
+		{
+			newAlert('error', 'You have Already Voted on this Graph');
+		}
+               else{newAlert('success',data);}
             });
 
 }
@@ -141,7 +145,11 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-             newAlert('success', data);
+		if(data == "Connected Successfully")
+		{
+			newAlert('error', 'You have Already Voted on this Graph');
+		}
+             else{newAlert('success', data);}
             });
 }
 	
@@ -158,9 +166,14 @@ function getLink()
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
          $.post("shortener.php",{ getLink: rest },
             function(data){
-               alert(data);
+               newAlert('link',data);
             });
 
+
+}
+
+function keyword()
+{
 
 }
 /*
@@ -174,11 +187,12 @@ function newAlert (type, message) {
 {
     $("#alert-area").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
 }
-else
+else if(type = 'error')
 {
     $("#alert-area").append($("<div class='alert alert-error'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
 
 }
+else{}
 
 }
 

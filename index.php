@@ -166,9 +166,14 @@ function getLink()
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
          $.post("shortener.php",{ getLink: rest },
             function(data){
-               alert(data);
+               newAlert('link',data);
             });
 
+
+}
+
+function keyword()
+{
 
 }
 /*
@@ -182,10 +187,13 @@ function newAlert (type, message) {
 {
     $("#alert-area").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
 }
-else
+else if(type = 'error')
 {
     $("#alert-area").append($("<div class='alert alert-error'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
 
+}
+else{
+$("#sidebar").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
 }
 
 }
