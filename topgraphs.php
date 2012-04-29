@@ -56,7 +56,7 @@ require("connect.php");
 {
 	echo "<div class='span6'>
 			<div class='well'>
-				test
+				 <canvas id='".$row['penis']."' />
 			</div>
 			</div>";	
 
