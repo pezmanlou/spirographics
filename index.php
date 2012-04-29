@@ -126,10 +126,9 @@ $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("up");
-//document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote: "up" },
             function(data){
-		if(data == "Connected Successfully")
+		if(data =="")
 		{
 			newAlert('error', 'You have Already Voted on this Graph');
 		}
@@ -179,15 +178,8 @@ function getLink()
 
 }
 
-function keyword()
-{
 
-}
-/*
-function newAlert (type, message) {
-    $("#alert-area").append($("<div class='alert-message " + type +'>' "<a class='close' data-dismiss='alert' href=''>x</a>  <p> " + message + " </p></div>"));
-    
-}*/
+
 
 function newAlert (type, message) {
    if(type == 'success')
