@@ -156,7 +156,7 @@ $('input[name=vote]').val("down");
 
 function getLink()
 {
-	var base_url = "http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/";
+	var base_url = "http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/index.php?";
 	var offset = "offset="+document.getElementById("offset").value;
 	var moving = "moving="+document.getElementById("moving").value;
 	var fixed = "fixed="+document.getElementById("fixed").value
