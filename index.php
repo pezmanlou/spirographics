@@ -126,6 +126,8 @@ $('input[name=vote]').val("up");
 
 }
 
+
+
 function addToTheMotherFuckingDatabaseLouisIsThatBetterDown()
 {
 
@@ -139,7 +141,8 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-               $("container-fluid").alert(data);
+             newAlert('success', 'Oh yeah!');
+ 
             });
 
 
@@ -164,6 +167,12 @@ function getLink()
 
 
 }
+
+function newAlert (type, message) {
+    $("#alert-area").append($("<div class='alert-message " + type +'>' "<a class='close' data-dismiss='alert' href=''>x</a>  <p> " + message + " </p></div>"));
+    
+}
+
 
     </script>
 
@@ -226,10 +235,7 @@ function getLink()
   <input type="hidden" name="vote" value="">
 </form>
 
-<div class="alert fade in"> 
-  <a class="close" data-dismiss="alert" href="">&times;</a> 
-  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good. 
-</div>
+<div id="alert-area"></div>
 ​
 
 <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
