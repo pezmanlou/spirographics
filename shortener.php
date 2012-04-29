@@ -3,8 +3,8 @@
 
 
 $rest = "http://fatlink.me/api.php?action=shorturl&format=simple&keyword=test&url=http://triallink.com".
-
-echo $rest;
+$response = file_get_contents($rest);
+echo $response;
 
 
 ?>
