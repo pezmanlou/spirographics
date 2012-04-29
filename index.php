@@ -117,9 +117,9 @@ var fixed = document.getElementById("fixed").value;
 $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
-$('input[name=vote]').val("up");
+var x = $('input[name=vote]').val("up");
 //document.bonerjams08.submit();
- $.post("update.php",{ fixed: fixed, moving:moving, offset:offset },
+ $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote: up },
             function(data){
                alert(data);
             });
@@ -137,7 +137,7 @@ $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
- $.post("update.php",{ fixed: fixed, moving:moving, offset:offset },
+ $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:down },
             function(data){
                alert(data);
             });
