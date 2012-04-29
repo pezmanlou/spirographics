@@ -154,6 +154,7 @@ function getLink()
 
    	 function(data){
         $('#link').html(data.returnValue);
+	alert("here");
     }, 
     
     "json"
