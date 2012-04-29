@@ -229,7 +229,11 @@ function getLink()
 <button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
 	
  <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
-
+<div class="alert alert-success">
+  <a class="close" data-dismiss="alert">×</a>
+  <h4 class="alert-heading">Warning!</h4>
+ What are you doing?! this will delete all files!!
+</div>
 
 <h3>Do you like this graph?</h3></p></div>
 <div class="well sidebar-nav" id="sidebar" >
