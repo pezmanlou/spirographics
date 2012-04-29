@@ -34,4 +34,4 @@ $data = curl_exec($ch);
 curl_close($ch);
 
 // Do something with the result. Here, we just echo it.
-echo 
+echo $data
