@@ -170,7 +170,7 @@ function newAlert (type, message) {
 }*/
 
 function newAlert (type, message) {
-    $("#alert-area").append($("<div class='alert fade in'>  <a class="close" data-dismiss="alert" href="">&times;</a> <p> " + message + " </p></div>"));
+    $("#alert-area").append($("<div class='alert fade in'>  <a class='close' data-dismiss='alert' href="">&times;</a> <p> " + message + " </p></div>"));
 }
 
 
