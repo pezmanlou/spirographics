@@ -128,7 +128,7 @@ $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("up");
  $.post("update.php",{ fixed:fixed, moving:moving, offset:offset, vote:"up" },
             function(data){
-		alert("penis penis");
+		alert(data);
 		if(data =="no")
 		{
 			newAlert('error', 'You have Already Voted on this Graph');
@@ -183,7 +183,7 @@ function getLink()
 
 
 function newAlert (type, message) {
-   alert(type);
+   //alert(type);
    if(type == 'success')
 {
     $("#alert-area").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
