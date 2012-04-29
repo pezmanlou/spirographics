@@ -54,7 +54,7 @@ var mySpiro;
     mySpiro.movingGearRadius = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.movingGearOffset = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
-    <?php if($_GET['fixed']) ?>
+    <?php if($_GET['fixed']) 
 
 	echo "alert(".$_GET['fixed'].");";
     ?>	
@@ -137,6 +137,30 @@ document.bonerjams08.submit();
 
 }
 
+function getLink()
+{
+	var base_url = "http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/";
+	var offset = "offset="+document.getElementById("offset").value;
+	var moving = "moving="+document.getElementById("moving").value;
+	var fixed = "fixed="+document.getElementById("fixed").value
+	var final_url = base_url + fixed + moving + offset; 
+
+
+	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
+	$.post(
+	
+	"shortener.php",
+	{getLink: rest},
+
+   	 function(data){
+        $('#link').html(data.returnValue);
+    }, 
+    
+    "json"
+    );
+
+}
+
     </script>
 
 
@@ -205,7 +229,8 @@ document.bonerjams08.submit();
 
 <h3>Do you like this graph?</h3></p></div>
 <div class="well sidebar-nav" id="sidebar" >
-            <div style="width:48%; float:left"><p><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></center></p></div>
+            <div style="width:48%; float:left"><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></div>
+	       <div style="width:48%; float:right" id ="link"><input type ="submit" value="Short Url" onclick="getLink()" class="btn btn-primary btn-medium" /></div>
 
 </div>
         </div><!--/span-->
