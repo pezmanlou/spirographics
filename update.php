@@ -58,7 +58,7 @@ else
 mysql_close();
 
 
-echo $response;
+echo "";
 
 ?>
 
