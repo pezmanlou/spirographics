@@ -143,7 +143,7 @@ $('input[name=vote]').val("down");
             function(data){
 	     
              newAlert('success', data);
-            }, "json");
+            });
 }
 	
 
