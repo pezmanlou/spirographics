@@ -158,9 +158,9 @@ function getLink()
 {
 	var base_url = "http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/index.php?";
 	var offset = "offset="+document.getElementById("offset").value;
-	var moving = "moving="+document.getElementById("moving").value;
-	var fixed = "fixed="+document.getElementById("fixed").value
-	var final_url = base_url + fixed + "&" + moving + "&" + offset; 
+	var moving = "&moving="+document.getElementById("moving").value;
+	var fixed = "&fixed="+document.getElementById("fixed").value
+	var final_url = base_url + fixed + moving + offset; 
 
 
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
