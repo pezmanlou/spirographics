@@ -54,11 +54,11 @@ require("connect.php");
 	<?php $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
 	while($row = mysql_fetch_array($result))
 {
-	echo "<div class='span4'>
+	echo "<div class='span6'>
 			<div class='well'>
 				test
 			</div>
-			</div>";
+			</div>";	
 
 }
 	?>	      
