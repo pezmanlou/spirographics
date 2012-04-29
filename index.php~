@@ -150,7 +150,7 @@ function getLink()
          $.post("shortener.php",{ getLink: rest },
             function(data){
                alert("here");
-            
+            });
 
 
 }
