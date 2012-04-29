@@ -170,7 +170,7 @@ function newAlert (type, message) {
 }*/
 
 function newAlert (type, message) {
-    $("#alert-area").append($("<div class='alert alert-error'> <p>" + message + " </p></div>"));
+    $("#alert-area").append($("<div class='alert alert-error'> " + message + " </div>"));
 }
 
 
