@@ -51,7 +51,7 @@ if(mysql_num_rows($result)==0)
 
 else
 {
-	$response ="no";
+	$response ="fuck vaginas";
 }
 
 
