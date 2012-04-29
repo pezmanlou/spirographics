@@ -284,7 +284,6 @@ $("#link-alert").append($("<div class='alert alert-success'> <a class='close' da
         </div><!--/span-->
       </div><!--/row-->
 
-      <hr>
 
       <footer>
         <p>&copy; tehInternetzd00d (we are ironic) 2012</p>
