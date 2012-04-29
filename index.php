@@ -225,13 +225,13 @@ function getLink()
   <input type="hidden" name="fixed" value="">
   <input type="hidden" name="vote" value="">
 </form>
-<div class = "alerts">
-<div class="alert alert-success">
-  <a class="close" data-dismiss="alert">×</a>
-  <h4 class="alert-heading">Warning!</h4>
- What are you doing?! this will delete all files!!
+
+<div class="alert fade in"> 
+  <a class="close" data-dismiss="alert" href="#">&times;</a> 
+  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good. 
 </div>
-</div>
+​
+
 <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
 	
  <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
@@ -265,6 +265,7 @@ function getLink()
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
     <script src="http://www.nihilogic.dk/labs/canvas2image/canvas2image.js" type="text/javascript"></script>
     <script src="http://www.nihilogic.dk/labs/canvas2image/base64.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
     <!-- <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
