@@ -193,7 +193,7 @@ else if(type = 'error')
 
 }
 else{
-$("#sidebar").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
+$("#link-alert").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
 }
 
 }
@@ -273,6 +273,7 @@ $("#sidebar").append($("<div class='alert alert-success'> <a class='close' data-
 <div class="well sidebar-nav" id="sidebar" >
             <div style="width:48%; float:left"><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></div>
 	       <div style="width:48%; float:right" id ="link"><input type ="submit" value="Short Url" onclick="getLink()" class="btn btn-primary btn-medium" /></div>
+		<div id="link-alert"></div>
 
 </div>
         </div><!--/span-->
