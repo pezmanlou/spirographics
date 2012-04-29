@@ -128,9 +128,9 @@ $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("up");
  $.post("update.php",{ fixed:fixed, moving:moving, offset:offset, vote:"up" },
             function(data){
-		if(data =="no\n")
+		if($.trim(data) =="error")
 		{
-			newAlert('error', 'You have Already Voted on this Graph');
+			newAlert('error', 'ERROR: you have already voted on this graph');
 		}
                else{newAlert('success',data);}
             });
@@ -152,9 +152,9 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-		if(data == "error")
+		if($.trim(data) == "error")
 		{
-			newAlert('error', 'You have Already Voted on this Graph');
+			newAlert('error', 'ERROR: you have already voted on this graph');
 		}
              else{newAlert('success', data);}
             });
