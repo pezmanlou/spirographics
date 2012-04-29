@@ -226,7 +226,7 @@ function getLink()
   <input type="hidden" name="fixed" value="">
   <input type="hidden" name="vote" value="">
 </form>
-<div class="alert alert-block">
+<div class="alert alert-success">
   <a class="close" data-dismiss="alert">×</a>
   <h4 class="alert-heading">Warning!</h4>
  What are you doing?! this will delete all files!!
