@@ -128,7 +128,7 @@ $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("up");
  $.post("update.php",{ fixed:fixed, moving:moving, offset:offset, vote:"up" },
             function(data){
-		if(data.toString() =="no")
+		if(<?php echo strip_tags(data)?> =="no")
 		{
 			newAlert('error', 'You have Already Voted on this Graph');
 		}
