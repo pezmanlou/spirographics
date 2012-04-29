@@ -21,14 +21,15 @@ function thumbnail(c, f, m, o){
     y = (f - m)*Math.sin(0) - o*Math.sin(0);
     context.moveTo(canvas.width/2 + x,canvas.height/2 + y);
     context.beginPath();
+    var maxtheta = (Math.abs(m)/GCD(Math.abs(f),Math.abs(m)))*2*Math.PI;
 
     // then draw the line
-    for (var tempTheta = 0; tempTheta <= mySpiro.maxTheta; tempTheta = tempTheta + .01)
+    for (var tempTheta = 0; tempTheta <= maxtheta; tempTheta = tempTheta + .01)
     {
-        if (tempTheta > mySpiro.maxTheta)
+        if (tempTheta > maxtheta)
         {
-            x = (f - m)*Math.cos(mySpiro.maxTheta) + o*Math.cos(((f-m)/m)*mySpiro.maxTheta);
-            y = (f - m)*Math.sin(mySpiro.maxTheta) - o*Math.sin(((f-m)/m)*mySpiro.maxTheta);
+            x = (f - m)*Math.cos(maxtheta) + o*Math.cos(((f-m)/m)*maxtheta);
+            y = (f - m)*Math.sin(maxtheta) - o*Math.sin(((f-m)/m)*maxtheta);
         }else
         {
             x = (f - m)*Math.cos(tempTheta) + o*Math.cos(((f-m)/m)*tempTheta);
@@ -37,8 +38,8 @@ function thumbnail(c, f, m, o){
         context.lineTo(canvas.width/2 + x,canvas.height/2 + y);
 
     }
-    context.lineWidth = 1;
-    context.strokeStyle = mySpiro.lineColor;
+    context.lineWidth = .5;
+    context.strokeStyle = "#228B22";
     context.stroke();
 
 
@@ -102,7 +103,8 @@ function thumbnail(c, f, m, o){
 {
 	echo "<div class='span6'>
 			<div class='well'>
-				 <canvas id='".$row['penis']."' />
+				 <canvas id='".$row['penis']."' style='height=200px; width=200px;' />
+				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
 
 			</div>
 			</div>";	
