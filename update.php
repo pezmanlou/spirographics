@@ -10,7 +10,6 @@ $offset = $_POST[offset];
 
 $response = "error";
 echo $_POST['vote'];
-echo "here";
 $sql = "SELECT * FROM graphs WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset' AND ip='$clientIp'";
 $result = mysql_query($sql);
 if(mysql_num_rows($result)==0)
