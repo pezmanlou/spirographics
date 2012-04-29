@@ -227,7 +227,7 @@ function getLink()
 </form>
 
 <div class="alert fade in"> 
-  <a class="close" data-dismiss="alert" href="#">&times;</a> 
+  <a class="close" data-dismiss="alert" href="">&times;</a> 
   <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good. 
 </div>
 ​
