@@ -8,7 +8,7 @@ $fixed = $_POST[fixed];
 $moving = $_POST[moving];
 $offset = $_POST[offset];
 
-
+$response = "error";
 
 $sql = "SELECT * FROM graphs WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset' AND ip='$clientIp'";
 $result = mysql_query($sql);
@@ -19,10 +19,12 @@ if(mysql_num_rows($result)==0)
 	if($_POST['vote'] == 'up')
 	{	
 		$like = 1;
+		$response= "Successfully liked";
 	}
 	else
 	{
 		$dislike = 1;
+		$response = "Successfully disliked";
 	}
 
 	$insert = "INSERT INTO graphs (fixed,moving,offset,likes,dislikes,ip) VALUES ( '$fixed', '$moving', '$offset','$like', '$dislike','$clientIp')";	
@@ -52,9 +54,7 @@ if(mysql_num_rows($result)==0)
 mysql_close();
 
 
-
+echo $response;
 
 ?>
 
-
-a;sldjflaksdjfasdl;ajf
