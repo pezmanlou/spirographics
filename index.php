@@ -139,13 +139,12 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-               $(".alert-message success").alert(data);
+               $("container-fluid").alert(data);
             });
 
 
 
 }
-
 	
 
 function getLink()
@@ -260,10 +259,8 @@ function getLink()
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
     <script src="http://www.nihilogic.dk/labs/canvas2image/canvas2image.js" type="text/javascript"></script>
     <script src="http://www.nihilogic.dk/labs/canvas2image/base64.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-
     <!-- <script src="assets/js/bootstrap-transition.js"></script>
-
+    <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>
     <script src="assets/js/bootstrap-scrollspy.js"></script>
