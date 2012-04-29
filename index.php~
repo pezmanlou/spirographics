@@ -233,10 +233,7 @@ function getLink()
 <div class="well sidebar-nav" id="sidebar" >
             <div style="width:48%; float:left"><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></div>
 	       <div style="width:48%; float:right"><input type ="submit" value="Short Url" onclick="getLink()" class="btn btn-primary btn-medium" /></div>
-<div id="test">
 
-
-</div>	
 </div>
         </div><!--/span-->
  <div class="span9" id="spiroWidth">
