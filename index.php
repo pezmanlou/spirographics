@@ -147,6 +147,7 @@ function getLink()
 
 
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
+	alert("here");
 	$.post(
 	
 	"shortener.php",
