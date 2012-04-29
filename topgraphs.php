@@ -58,7 +58,7 @@ require("connect.php");
 			<div class='well'>
 				test
 			</div>
-			</div>"
+			</div>";
 
 }
 	?>	      
