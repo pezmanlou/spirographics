@@ -9,8 +9,8 @@
 
 
 // EDIT THIS: the query parameters
-$url = 'http://planetozh.com/blog/'; // URL to shrink
-$keyword = 'ozh';				// optional keyword
+$url = 'http://test.com'; // URL to shrink
+$keyword = 'trial';				// optional keyword
 $format = 'json';				// output format: 'json', 'xml' or 'simple'
 
 // EDIT THIS: the URL of the API file
@@ -26,9 +26,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, array(     // Data to POST
 		'url'      => $url,
 		'keyword'  => $keyword,
 		'format'   => $format,
-		'action'   => 'shorturl',
-		'username' => $username,
-		'password' => $password
+		'action'   => 'shorturl'
 	));
 
 // Fetch and return content
