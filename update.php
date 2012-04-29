@@ -19,12 +19,12 @@ if(mysql_num_rows($result)==0)
 	if($_POST['vote'] == 'up')
 	{	
 		$like = 1;
-		$response= "Successfully liked. Fixed: ".$fixed." Moving: ".$moving." Offset: ".$offset;
+		$response= "Me Gusta!";
 	}
 	else
 	{
 		$dislike = 1;
-		$response = "Successfully disliked Fixed: ".$fixed." Moving: ".$moving." Offset: ".$offset;
+		$response = "ooohhhh No mE gUsTa!!! :(";
 	}
 
 	$insert = "INSERT INTO graphs (fixed,moving,offset,likes,dislikes,ip) VALUES ( '$fixed', '$moving', '$offset','$like', '$dislike','$clientIp')";	
