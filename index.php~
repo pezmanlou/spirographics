@@ -169,7 +169,7 @@ function newAlert (type, message) {
     
 }*/
 
-function newAlert (message) {
+function newAlert (type, message) {
    if(type == 'success')
 {
     $("#alert-area").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
