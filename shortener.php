@@ -7,5 +7,5 @@ if (isset($_POST['sendValue'])){
 }else{
     $value = "";
 }
- return $value;
+ echo $value;
 ?>
