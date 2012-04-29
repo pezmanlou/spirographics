@@ -226,12 +226,10 @@ function getLink()
   <input type="hidden" name="fixed" value="">
   <input type="hidden" name="vote" value="">
 </form>
-<div class="alerts">
-  <div class="alert-message success">
-    <a class="close" href="#">×</a>
-    <p><strong>Well done!</strong> You successfully <a href="#">read this</a> alert message.</p>
-  </div>
-
+<div class="alert alert-block">
+  <a class="close" data-dismiss="alert">×</a>
+  <h4 class="alert-heading">Warning!</h4>
+ What are you doing?! this will delete all files!!
 </div>
 <button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
 	
