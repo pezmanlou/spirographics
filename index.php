@@ -214,7 +214,7 @@ function getLink()
           </div><!--/.well -->
 <div class="well sidebar-nav" id="sidebar" >
 
- <form name="bonerjams08" action="update.php" method="post">
+ <form name="bonerjams08" action="" method="post">
    <input type="hidden" name="moving" value="">
    <input type="hidden" name="offset" value = "">
   <input type="hidden" name="fixed" value="">
@@ -223,7 +223,7 @@ function getLink()
 
 <button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetter()"><img src="assets/img/up.png" style="width:64px;"/></button>
 	
- <button type="Submit" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
+ <button type="button" onclick="addToTheMotherFuckingDatabaseLouisIsThatBetterDown()"><img src="assets/img/down.png" style=" width:64px"/></button>
 
 
 <h3>Do you like this graph?</h3></p></div>
