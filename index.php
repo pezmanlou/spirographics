@@ -147,15 +147,14 @@ function getLink()
 
 
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
-	alert("here");
 	$.post(
-	
+	alert("here");
 	"shortener.php",
 	{getLink: rest},
 
    	 function(data){
         $('#link').html(data.returnValue);
-	alert("here");
+	
     }, 
     
     "json"
