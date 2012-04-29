@@ -169,6 +169,12 @@ function newAlert (type, message) {
     
 }*/
 
+function newAlert (type, message) {
+    $("#alert-area").append($("<div class='alert-message " + type + " fade in' data-alert><p> " + message + " </p></div>"));
+    $(".alert-message").delay(2000).fadeOut("slow", function () { $(this).remove(); });
+}
+
+
 
     </script>
 

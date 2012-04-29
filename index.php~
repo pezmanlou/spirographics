@@ -163,11 +163,11 @@ function getLink()
 
 
 }
-
+/*
 function newAlert (type, message) {
     $("#alert-area").append($("<div class='alert-message " + type +'>' "<a class='close' data-dismiss='alert' href=''>x</a>  <p> " + message + " </p></div>"));
     
-}
+}*/
 
 
     </script>
