@@ -54,13 +54,21 @@ var mySpiro;
     mySpiro.movingGearRadius = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.movingGearOffset = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
-    <?php if($_GET['fixed']) 
+    <?php 
+        if($_GET['fixed'] && $_GET['moving'] && $_GET['offset'])
+	{
+	    echo "document.getElementById(\"fixed\").value = ".$_GET['fixed'].";";
+	    echo "document.getElementById(\"moving\").value = ".$_GET['moving'].";";
+	    echo "document.getElementById(\"offset\").value = ".$_GET['offset'].";";
+        }else
+        {
+            echo "document.getElementById(\"moving\").value = mySpiro.movingGearRadius;";
+            echo "document.getElementById(\"offset\").value = mySpiro.movingGearOffset;";
+            echo "document.getElementById(\"fixed\").value = mySpiro.fixedGearRadius;";
+        }
 
-	echo "alert(".$_GET['fixed'].");";
     ?>	
-    document.getElementById("moving").value = mySpiro.movingGearRadius;
-    document.getElementById("offset").value = mySpiro.movingGearOffset;
-    document.getElementById("fixed").value = mySpiro.fixedGearRadius;
+
     var date = new Date();
     var time = date.getTime();
     animate(time, mySpiro);
