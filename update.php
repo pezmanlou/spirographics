@@ -49,6 +49,10 @@ if(mysql_num_rows($result)==0)
 
 }
 
+else
+{
+	$response = "";
+}
 
 
 mysql_close();

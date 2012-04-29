@@ -141,8 +141,9 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-             newAlert('error', data);
-            });
+	     
+             newAlert('success', data);
+            }, "json");
 }
 	
 
