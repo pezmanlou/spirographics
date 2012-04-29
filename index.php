@@ -118,7 +118,11 @@ $('input[name=offset]').val(offset);
 $('input[name=moving]').val(moving);
 $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("up");
-document.bonerjams08.submit();
+//document.bonerjams08.submit();
+ $.post("update.php",{ fixed: fixed, moving:moving, offset:offset },
+            function(data){
+               alert(data);
+            });
 
 }
 
