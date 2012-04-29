@@ -4,6 +4,52 @@ require("connect.php");
 
 
 ?>
+<script type="text/javascript">
+function thumbnail(c, f, m, o){
+    var canvas = document.getElementById(c);
+    var context = canvas.getContext("2d");
+
+
+    // other vars
+    var x = 0;
+    var y = 0;
+
+
+
+    // move to starting point
+    x = (f - m)*Math.cos(0) + o*Math.cos(0);
+    y = (f - m)*Math.sin(0) - o*Math.sin(0);
+    context.moveTo(canvas.width/2 + x,canvas.height/2 + y);
+    context.beginPath();
+
+    // then draw the line
+    for (var tempTheta = 0; tempTheta <= mySpiro.maxTheta; tempTheta = tempTheta + .01)
+    {
+        if (tempTheta > mySpiro.maxTheta)
+        {
+            x = (f - m)*Math.cos(mySpiro.maxTheta) + o*Math.cos(((f-m)/m)*mySpiro.maxTheta);
+            y = (f - m)*Math.sin(mySpiro.maxTheta) - o*Math.sin(((f-m)/m)*mySpiro.maxTheta);
+        }else
+        {
+            x = (f - m)*Math.cos(tempTheta) + o*Math.cos(((f-m)/m)*tempTheta);
+            y = (f - m)*Math.sin(tempTheta) - o*Math.sin(((f-m)/m)*tempTheta);
+        }
+        context.lineTo(canvas.width/2 + x,canvas.height/2 + y);
+
+    }
+    context.lineWidth = 1;
+    context.strokeStyle = mySpiro.lineColor;
+    context.stroke();
+
+
+}
+ function GCD(a,b){
+	var t;
+	while(b!=0)b=a%(t=b),a=t;		
+	return a;
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
