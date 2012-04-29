@@ -8,7 +8,7 @@ $fixed = $_POST[fixed];
 $moving = $_POST[moving];
 $offset = $_POST[offset];
 
-$response = "error";
+$response = "";
 
 $sql = "SELECT * FROM graphs WHERE fixed='$fixed' AND moving='$moving' AND offset='$offset' AND ip='$clientIp'";
 $result = mysql_query($sql);
