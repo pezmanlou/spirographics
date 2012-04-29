@@ -3,13 +3,6 @@ require("connect.php");
 
 $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
 
-while($row = mysql_fetch_array($result))
-{
-	//echo $row['rank'].'<br />';
-
-
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,11 +51,16 @@ while($row = mysql_fetch_array($result))
 
     <div class="container">
      	<div class="row">
-		      <div class="span4">
-			<div class="well">
+	<?php while($row = mysql_fetch_array($result))
+{
+	echo "<div class='span4'>
+			<div class='well'>
 				test
 			</div>
-			</div>
+			</div>"
+
+}
+	?>	      
 	</div>
    </div>
       <footer>
@@ -103,3 +101,4 @@ while($row = mysql_fetch_array($result))
 
   </body>
 </html>
+
