@@ -152,7 +152,6 @@ $('input[name=vote]').val("down");
 //document.bonerjams08.submit();
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
-		alert(data);
 		if(data == "error")
 		{
 			newAlert('error', 'You have Already Voted on this Graph');
@@ -183,6 +182,7 @@ function getLink()
 
 
 function newAlert (type, message) {
+   alert(type);
    if(type == 'success')
 {
     $("#alert-area").append($("<div class='alert alert-success'> <a class='close' data-dismiss='alert'>×</a>" + message + " </div>"));
