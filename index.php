@@ -146,6 +146,14 @@ $('input[name=vote]').val("down");
 
 }
 
+$(document).ajaxSuccess(function() {
+  //fire success message using the plugin of choice, for example using gritter:
+  $.gritter.add({ 
+    title: 'Save Complete!',
+    text: 'Your request completed successfully.'
+  });
+});
+
 function getLink()
 {
 	var base_url = "http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/";
