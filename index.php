@@ -128,7 +128,7 @@ $('input[name=fixed]').val(fixed);
 $('input[name=vote]').val("up");
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote: "up" },
             function(data){
-		if(data =="error")
+		if(data =="<br /\>error")
 		{
 			newAlert('error', 'You have Already Voted on this Graph');
 		}
@@ -153,7 +153,7 @@ $('input[name=vote]').val("down");
  $.post("update.php",{ fixed: fixed, moving:moving, offset:offset, vote:"down"},
             function(data){
 		alert(data);
-		if(data == "error")
+		if(data == "<br/\>error")
 		{
 			newAlert('error', 'You have Already Voted on this Graph');
 		}
