@@ -103,14 +103,9 @@ function thumbnail(c, f, m, o){
 {
 	echo "<div class='span6'>
 			<div class='well'>
-				<div style='float:left'>
 				 <canvas id='".$row['penis']."' style='height:200px; width:200px;' />
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
-				</div>
-			<div style='float:right'>
-			<div class='well'>
-				test poop dick
-			</div>
+
 			</div>
 			</div>";	
 
