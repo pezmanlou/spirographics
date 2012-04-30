@@ -11,16 +11,10 @@ function thumbnail(c, f, m, o){
   m = Math.floor(m*scaleo);
   o = Math.floor(o*scaleo);
 
-    //context.scale(300/scaleDenom,150/scaleDenom);
-    // other vars
-    var x = 0;
-    var y = 0;
-
-
 
     // move to starting point
-    x = (f - m)*Math.cos(0) + o*Math.cos(0);
-    y = (f - m)*Math.sin(0) - o*Math.sin(0);
+    var x = (f - m)*Math.cos(0) + o*Math.cos(0);
+    var y = (f - m)*Math.sin(0) - o*Math.sin(0);
     context.moveTo(canvas.width/2 + x,canvas.height/2 + y);
     context.beginPath();
   alert("here");
