@@ -7,9 +7,9 @@ function thumbnail(c, f, m, o){
   var context = canvas.getContext("2d");
 
   var scaleo = 150/(f+m);
-  f *= Math.floor(scaleo);
-  m *= Math.floor(scaleo);
-  o *= Math.floor(scaleo);
+  f = Math.floor(f*scaleo);
+  m = Math.floor(m*scaleo);
+  o = Math.floor(o*scaleo);
 
     //context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
