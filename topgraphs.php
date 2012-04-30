@@ -138,16 +138,7 @@ function thumbnail(c, f, m, o){
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script> -->
-<script>
 
-    $(document).ready(function() { welcome(); });
-
-    $("input").focus(function () {
-         $(this).next("span").css('display','inline').fadeOut(1000);
-	
-    });
-
-</script>
 
   </body>
 </html>
