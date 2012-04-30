@@ -171,7 +171,7 @@ function getLink()
 	var moving = "&moving="+document.getElementById("moving").value;
 	var offset = "&offset="+document.getElementById("offset").value;
 	var final_url = base_url + fixed + moving + offset; 
-
+	alert(final_url);
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
          $.post("shortener.php",{ getLink: rest },
             function(data){
