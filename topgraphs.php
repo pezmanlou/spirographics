@@ -118,9 +118,10 @@ function thumbnail(c, f, m, o){
 				
 				</div>
 			<div style='float:right; padding-right:30px;'>
+				<h2> Graph Values </h2>
 				<h3> Fixed: </h3>".$row['fixed']."
-				<h3> Fixed: </h3>".$row['moving']."
-				<h3> Fixed: </h3>".$row['offset']."
+				<h3> Moving: </h3>".$row['moving']."
+				<h3> Offset: </h3>".$row['offset']."
 			</div>
 			</div>
 			</div>";	
