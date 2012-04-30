@@ -122,7 +122,7 @@ function thumbnail(c, f, m, o){
 				<h4> Fixed: </h4>".$row['fixed']."
 				<h4> Moving: </h4>".$row['moving']."
 				<h4> Offset: </h4>".$row['offset']."
-				<a href=http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/index.php?fixed=".$row['fixed']."&moving=".$row['moving']."&offset=".$row['offset'].">Clicky Click</a>
+				<br /><a href=http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/index.php?fixed=".$row['fixed']."&moving=".$row['moving']."&offset=".$row['offset'].">Clicky Click</a>
 			</div>
 			</div>
 			</div>";	
