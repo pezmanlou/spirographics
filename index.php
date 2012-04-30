@@ -53,7 +53,7 @@ var mySpiro;
     mySpiro.fixedGearRadius = Math.floor(Math.random()*canvas.height/2);
     mySpiro.movingGearRadius = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
     mySpiro.movingGearOffset = Math.floor(Math.random()*(((canvas.height/2) - mySpiro.fixedGearRadius)/2));
-    mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
+
     <?php 
         if($_GET['fixed'] && $_GET['moving'] && $_GET['offset'])
 	{
@@ -71,7 +71,7 @@ var mySpiro;
         }
 
     ?>	
-
+    mySpiro.maxTheta = (Math.abs(mySpiro.movingGearRadius)/GCD(Math.abs(mySpiro.fixedGearRadius),Math.abs(mySpiro.movingGearRadius)))*2*Math.PI;
     var date = new Date();
     var time = date.getTime();
     animate(time, mySpiro);
