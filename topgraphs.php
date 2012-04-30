@@ -97,7 +97,7 @@ function thumbnail(c, f, m, o){
           <a class="brand" href="">SpiroGraphics</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Generate</a></li>
+              <li class="active"><a href="">Generate</a></li>
               <li><a href="topgraphs.php">Top 10 Spirographs</a></li>
             </ul>
           </div><!--/.nav-collapse -->
