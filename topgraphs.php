@@ -6,10 +6,10 @@ function thumbnail(c, f, m, o){
   var canvas = document.getElementById(c);
   var context = canvas.getContext("2d");
 
-  var scaleo = 150/(f+m);
-  f *= scaleo;
-  m *= scaleo;
-  o *= scaleo;
+  //var scaleo = 150/(f+m);
+  //f *= scaleo;
+  //m *= scaleo;
+  //o *= scaleo;
 
     //context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
