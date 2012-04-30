@@ -9,7 +9,7 @@ function thumbnail(c, f, m, o){
     var canvas = document.getElementById(c);
     var context = canvas.getContext("2d");
 
-
+    ctx.scale(200/f+(m>o?m:o),200/(m>o?m:o));
     // other vars
     var x = 0;
     var y = 0;
