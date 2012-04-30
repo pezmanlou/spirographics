@@ -106,11 +106,11 @@ function thumbnail(c, f, m, o){
     </div>
 
     <div class="container">
-     	<div class="row">
+
 	<?php $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
 	while($row = mysql_fetch_array($result))
 {
-	echo "<div class='span6'>
+	echo "     	<div class='row'><div class='span6'>
 
 				 <canvas id='".$row['penis']."' style='height:150px; width:300px;' class='well' />
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
