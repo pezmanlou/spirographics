@@ -113,14 +113,13 @@ function thumbnail(c, f, m, o){
 {
 	echo "<div class='span6'>
 			<div class='well' style='height:200px;'>
-			<h2>".$i."</h2>
 			<div style='float:left'>
 				<a href=http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/index.php?fixed=".$row['fixed']."&moving=".$row['moving']."&offset=".$row['offset']."> <canvas id='".$row['penis']."' style='height:150px; width:300px;' class='well' /></a>
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
 				
 				</div>
 			<div style='float:right; padding-right:20px;'>
-				<h2> Graph Values </h2>
+				<h2> Graph ".$i." </h2>
 				<h4> Fixed: </h4>".$row['fixed']."
 				<h4> Moving: </h4>".$row['moving']."
 				<h4> Offset: </h4>".$row['offset']."
