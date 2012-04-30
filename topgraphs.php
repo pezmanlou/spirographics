@@ -10,16 +10,16 @@ function thumbnail(c, f, m, o){
     var context = canvas.getContext("2d");
 
 
-var scaleDenom = 0;
-    if (m>o)
-{
-scaleDenom = m;
-}else
-{
-scaleDenom = o;
-}
-scaleDenom +=f;
-scaleDenom *= 2;
+	var scaleDenom = 0;
+	    if (m>o)
+	{
+	scaleDenom = m;
+	}else
+	{
+	scaleDenom = o;
+	}
+	scaleDenom +=f;
+	scaleDenom *= 2;
 
     context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
