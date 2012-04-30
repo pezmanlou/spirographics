@@ -23,8 +23,9 @@ function thumbnail(c, f, m, o){
     y = (f - m)*Math.sin(0) - o*Math.sin(0);
     context.moveTo(canvas.width/2 + x,canvas.height/2 + y);
     context.beginPath();
-    var maxtheta = (Math.abs(m)/GCD(Math.abs(f),Math.abs(m)))*2*Math.PI;
   alert("here");
+    var maxtheta = (Math.abs(m)/GCD(Math.abs(f),Math.abs(m)))*2*Math.PI;
+
     // then draw the line
     for (var tempTheta = 0; tempTheta <= maxtheta; tempTheta = tempTheta + .01)
     {
