@@ -276,10 +276,10 @@ $("#link-alert").append($("<div class='alert alert-success'> <a class='close' da
 <h3>Do you like this graph?</h3></p></div>
 <div class="well sidebar-nav" id="sidebar" >
             <div style="width:48%; float:left"><input type ="submit" value="Download" onclick="save()" class="btn btn-primary btn-medium" /></div>
-	       <div style="width:48%; float:right" id ="link"><input type ="submit" value="Short Url" onclick="getLink()" class="btn btn-primary btn-medium" /></div>
+	       <div style="width:48%; float:right" id ="link"><input type ="submit" value="Short Url" onclick="getLink()" class="btn btn-primary btn-medium" /></div></div>
 		<div id="link-alert"></div>
 
-</div>
+
         </div><!--/span-->
  <div class="span9" id="spiroWidth">
 		<div style="background:#000">
