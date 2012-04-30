@@ -1,8 +1,5 @@
 <?php
 require("connect.php");
-
-
-
 ?>
 <script type="text/javascript">
 function thumbnail(c, f, m, o){
@@ -129,7 +126,6 @@ function thumbnail(c, f, m, o){
         <p>&copy; tehInternetzd00d (we are ironic) 2012</p>
       </footer>
 
-    </div><!--/.fluid-container-->
 
     <!-- Le javascript
     ================================================== -->
