@@ -171,6 +171,7 @@ function getLink()
 	var moving = "&moving="+document.getElementById("moving").value;
 	var offset = "&offset="+document.getElementById("offset").value;
 	var final_url = base_url + fixed + moving + offset; 
+	final_url = encodeURIComponent(final_url);
 	alert(final_url);
 	var rest = "http://fatlink.me/api.php?action=shorturl&format=simple&url="+final_url;
 	alert(rest);
