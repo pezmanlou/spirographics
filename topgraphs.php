@@ -17,7 +17,7 @@ function thumbnail(c, f, m, o){
     var y = 0;
 
 
-
+  alert("here");
     // move to starting point
     x = (f - m)*Math.cos(0) + o*Math.cos(0);
     y = (f - m)*Math.sin(0) - o*Math.sin(0);
