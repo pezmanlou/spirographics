@@ -3,22 +3,27 @@ require("connect.php");
 ?>
 <script type="text/javascript">
 function thumbnail(c, f, m, o){
-    var canvas = document.getElementById(c);
-    var context = canvas.getContext("2d");
-
+  var canvas = document.getElementById(c);
+  var context = canvas.getContext("2d");
 
 	var scaleDenom = 0;
-	    if (m>o)
+
+  if (m>o)
 	{
-	scaleDenom = m;
+	  scaleDenom = m;
 	}else
 	{
-	scaleDenom = o;
+	  scaleDenom = o;
 	}
+
 	scaleDenom +=f;
 	scaleDenom *= 2;
 
-    context.scale(300/scaleDenom,150/scaleDenom);
+  var scale = 150/(f+m);
+  f *= scale;
+  m *= scale;
+
+    //context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
     var x = 0;
     var y = 0;
