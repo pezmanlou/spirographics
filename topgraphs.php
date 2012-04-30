@@ -9,7 +9,19 @@ function thumbnail(c, f, m, o){
     var canvas = document.getElementById(c);
     var context = canvas.getContext("2d");
 
-    context.scale(100/(f+(m>o?m:o)),100/(f+(m>o?m:o)));
+
+var scaleDenom = 0;
+    if (m>o)
+{
+scaleDenom = m;
+}else
+{
+scaleDenom = o;
+}
+scaleDenom +=f;
+scaleDenom *= 2;
+scaleDenom = 100/scaleDenom;
+    context.scale(scaleDenom,scaleDenom);
     // other vars
     var x = 0;
     var y = 0;
