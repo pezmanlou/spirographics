@@ -47,7 +47,7 @@ scaleDenom *= 2;
             x = (f - m)*Math.cos(tempTheta) + o*Math.cos(((f-m)/m)*tempTheta);
             y = (f - m)*Math.sin(tempTheta) - o*Math.sin(((f-m)/m)*tempTheta);
         }
-        context.lineTo(canvas.width/2 + x/scaleDenom,canvas.height/2 + y/scaleDenom);
+        context.lineTo((canvas.width/2 + x)/scaleDenom,(canvas.height/2 + y)/scaleDenom);
 
     }
     context.lineWidth = .5;
