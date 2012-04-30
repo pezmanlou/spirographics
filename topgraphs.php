@@ -22,6 +22,7 @@ function thumbnail(c, f, m, o){
   var scale = 150/(f+m);
   f *= scale;
   m *= scale;
+  o *= scale;
 
     //context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
@@ -49,7 +50,7 @@ function thumbnail(c, f, m, o){
             x = (f - m)*Math.cos(tempTheta) + o*Math.cos(((f-m)/m)*tempTheta);
             y = (f - m)*Math.sin(tempTheta) - o*Math.sin(((f-m)/m)*tempTheta);
         }
-        context.lineTo((canvas.width/2 + x)/(300/scaleDenom),(canvas.height/2 + y)/(150/scaleDenom));
+        context.lineTo(canvas.width/2 + x,canvas.height/2 + y);
 
     }
     context.lineWidth = .5;
