@@ -6,7 +6,7 @@ function thumbnail(c, f, m, o){
   var canvas = document.getElementById(c);
   var context = canvas.getContext("2d");
 
-  var scaleo = 150/(f+m);
+  var scaleo = 150/((f+m)*2);
   f = Math.floor(f*scaleo);
   m = Math.floor(m*scaleo);
   o = Math.floor(o*scaleo);
