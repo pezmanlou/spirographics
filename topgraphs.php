@@ -111,7 +111,7 @@ function thumbnail(c, f, m, o){
 	while($row = mysql_fetch_array($result))
 {
 	echo "<div class='span6'>
-			<div class='well' style='height:300px;'>
+			<div class='well' style='height:200px;'>
 			<div style='float:left'>
 				 <canvas id='".$row['penis']."' style='height:150px; width:300px;' class='well' />
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
