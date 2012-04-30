@@ -118,7 +118,9 @@ function thumbnail(c, f, m, o){
 				
 				</div>
 			<div style='float:right'>
-				work damnit
+				<h3> Fixed: </h3>".$row['fixed']."
+				<h3> Fixed: </h3>".$row['moving']."
+				<h3> Fixed: </h3>".$row['offset']."
 			</div>
 			</div>
 			</div>";	
