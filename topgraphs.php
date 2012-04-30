@@ -20,8 +20,7 @@ scaleDenom = o;
 }
 scaleDenom +=f;
 scaleDenom *= 2;
-scaleDenom = 100/scaleDenom;
-    context.scale(scaleDenom,scaleDenom);
+    context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
     var x = 0;
     var y = 0;
