@@ -119,7 +119,7 @@ function thumbnail(c, f, m, o){
 				
 				</div>
 			<div style='float:right; padding-right:20px;'>
-				<h2> Graph ".$i." </h2>
+				<h2> Rank ".$i." </h2>
 				<h4> Fixed: </h4>".$row['fixed']."
 				<h4> Moving: </h4>".$row['moving']."
 				<h4> Offset: </h4>".$row['offset']."
