@@ -96,7 +96,7 @@ function thumbnail(c, f, m, o){
     <div class="container">
      	<div class="row">
 	<?php $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
-	$i = 0;
+	$i = 1;
 	while($row = mysql_fetch_array($result))
 {
 	echo "<div class='span6'>
