@@ -10,6 +10,18 @@ function thumbnail(c, f, m, o){
     var context = canvas.getContext("2d");
 
 
+var scaleDenom = 0;
+    if (m>o)
+{
+scaleDenom = m;
+}else
+{
+scaleDenom = o;
+}
+scaleDenom +=f;
+scaleDenom *= 2;
+
+    context.scale(300/scaleDenom,150/scaleDenom);
     // other vars
     var x = 0;
     var y = 0;
@@ -35,7 +47,7 @@ function thumbnail(c, f, m, o){
             x = (f - m)*Math.cos(tempTheta) + o*Math.cos(((f-m)/m)*tempTheta);
             y = (f - m)*Math.sin(tempTheta) - o*Math.sin(((f-m)/m)*tempTheta);
         }
-        context.lineTo( x, y);
+        context.lineTo(canvas.width/2 + x/scaleDenom,canvas.height/2 + y/scaleDenom);
 
     }
     context.lineWidth = .5;
@@ -103,7 +115,7 @@ function thumbnail(c, f, m, o){
 {
 	echo "<div class='span6'>
 			<div class='well'>
-				 <canvas id='".$row['penis']."'  />
+				 <canvas id='".$row['penis']."' style='height:200px; width:200px;' />
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
 
 			</div>
