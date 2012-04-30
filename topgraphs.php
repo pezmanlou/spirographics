@@ -114,10 +114,8 @@ function thumbnail(c, f, m, o){
 			<div class='well'>
 				 <canvas id='".$row['penis']."' style='height:150px; width:300px;' />
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
-
-				<div style='float:right'>
-					test
-				</div>
+				test test
+				
 			</div>
 			</div>";	
 
