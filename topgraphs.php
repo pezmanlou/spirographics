@@ -110,7 +110,7 @@ function thumbnail(c, f, m, o){
 	<?php $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
 	while($row = mysql_fetch_array($result))
 {
-	echo "<div class='span6'>
+	echo "<div class='span6' style='height:400px;'>
 			<div class='well'>
 			<div style='float:left'>
 				 <canvas id='".$row['penis']."' style='height:150px; width:300px;' class='well' />
