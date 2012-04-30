@@ -115,7 +115,7 @@ scaleDenom *= 2;
 {
 	echo "<div class='span6'>
 			<div class='well'>
-				 <canvas id='".$row['penis']." />
+				 <canvas id='".$row['penis']."' style='height:150px; width:300px;' />
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
 
 			</div>
