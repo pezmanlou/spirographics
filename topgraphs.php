@@ -108,10 +108,12 @@ function thumbnail(c, f, m, o){
     <div class="container">
      	<div class="row">
 	<?php $result = mysql_query("SELECT * FROM graphrank ORDER BY rank DESC LIMIT 0,10");
+	$i = 0;
 	while($row = mysql_fetch_array($result))
 {
 	echo "<div class='span6'>
 			<div class='well' style='height:200px;'>
+			<h2>".$i."</h2>
 			<div style='float:left'>
 				<a href=http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/index.php?fixed=".$row['fixed']."&moving=".$row['moving']."&offset=".$row['offset']."> <canvas id='".$row['penis']."' style='height:150px; width:300px;' class='well' /></a>
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
@@ -126,7 +128,7 @@ function thumbnail(c, f, m, o){
 			</div>
 			</div>
 			</div>";	
-
+	$i = $i + 1;
 }
 	?>	      
 	</div>
