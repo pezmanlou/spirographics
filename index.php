@@ -60,6 +60,9 @@ var mySpiro;
 	    echo "document.getElementById(\"fixed\").value = ".$_GET['fixed'].";";
 	    echo "document.getElementById(\"moving\").value = ".$_GET['moving'].";";
 	    echo "document.getElementById(\"offset\").value = ".$_GET['offset'].";";
+	    echo "mySpiro.fixedGearRadius = ".$_GET['fixed'].";";
+	    echo "mySpiro.movingGearRadius = ".$_GET['moving'].";";
+	    echo "mySpiro.movingGearOffset = ".$_GET['offset'].";";
         }else
         {
             echo "document.getElementById(\"moving\").value = mySpiro.movingGearRadius;";
