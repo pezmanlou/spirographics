@@ -35,7 +35,7 @@ function thumbnail(c, f, m, o){
             x = (f - m)*Math.cos(tempTheta) + o*Math.cos(((f-m)/m)*tempTheta);
             y = (f - m)*Math.sin(tempTheta) - o*Math.sin(((f-m)/m)*tempTheta);
         }
-        context.lineTo(canvas.width/2 + x,canvas.height/2 + y);
+        context.lineTo( x, y);
 
     }
     context.lineWidth = .5;
