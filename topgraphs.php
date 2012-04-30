@@ -94,10 +94,10 @@ function thumbnail(c, f, m, o){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="">SpiroGraphics</a>
+          <a class="brand" href="http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/">SpiroGraphics</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="">Generate</a></li>
+              <li class="active"><a href="http://ec2-23-22-31-167.compute-1.amazonaws.com/Spirographics/">Generate</a></li>
               <li><a href="topgraphs.php">Top 10 Spirographs</a></li>
             </ul>
           </div><!--/.nav-collapse -->
