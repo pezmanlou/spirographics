@@ -116,6 +116,7 @@ function thumbnail(c, f, m, o){
 				<script>thumbnail(".$row['penis'].",".$row['fixed'].",".$row['moving'].",".$row['offset']." )</script>
 
 			</div>
+			test
 			</div>";	
 
 }
